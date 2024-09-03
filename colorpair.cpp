@@ -1,7 +1,8 @@
 #include "colorpair.h"
 #include <cmath>
+#include <string>
 
-using namespace TelCoColorCoder;
+namespace TelCoColorCoder {
 
 const char* MajorColorNames[] = {
     "White", "Red", "Black", "Yellow", "Violet"
@@ -33,7 +34,7 @@ std::string ColorPair::ToString() {
     return colorPairStr;
 }
 
-ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
+ColorPair GetColorFromPairNumber(int pairNumber) {
     int zeroBasedPairNumber = pairNumber - 1;
     MajorColor majorColor = 
         (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
@@ -42,8 +43,14 @@ ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
     return ColorPair(majorColor, minorColor);
 }
 
-int TelCoColorCoder::GetPairNumberFromColor(MajorColor major, MinorColor minor) {
+int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
     return major * numberOfMinorColors + minor + 1;
 }
 
 //add a new feature
+
+}
+
+
+
+
