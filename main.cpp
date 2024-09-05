@@ -27,7 +27,7 @@ namespace TelCoColorCoder
     std::string printReferenceManual()
     {
         //print reference manual for wiring personnel
-        std::string message = "Color Coding Manual\n";
+        std::string message = "Color Coding Manual"<< std::endl;
         for(int pairNumber = 1; pairNumber <= 25; pairNumber++) {
             TelCoColorCoder::ColorPair colorPair =
                 TelCoColorCoder::GetColorFromPairNumber(pairNumber);
@@ -41,12 +41,12 @@ namespace TelCoColorCoder
 }
  
 int main() {
-        // testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
-        // testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
+        testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
+        testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
  
-        // testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
-        // testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
+        testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
+        testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
  
-    std::cout<<TelCoColorCoder::printReferenceManual;
+         std::cout<<TelCoColorCoder::printReferenceManual;
     return 0;
 }
