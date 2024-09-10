@@ -28,7 +28,7 @@ namespace TelCoColorCoder
     {
         //print reference manual for wiring personnel
         std::string message = "Color Coding Manual\n";
-        for(int pairNumber = 1; pairNumber <= 25; pairNumber++) {
+        for(int pairNumber = 1; pairNumber <= (numberOfMajorColors * numberOfMinorColors); pairNumber++) {
             TelCoColorCoder::ColorPair colorPair =
                 TelCoColorCoder::GetColorFromPairNumber(pairNumber);
             message += std::to_string(pairNumber);
